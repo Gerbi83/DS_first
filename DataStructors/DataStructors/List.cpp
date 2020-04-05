@@ -6,18 +6,26 @@ using namespace std;
 
 List::List()
 {
-	listNode a;
-	head =tail = &a;
+	listNode * a = new listNode();
+	head =tail = a;
 }
 
 
 
-listNode* List::getHead()
+
+ listNode * List::getHead()
 {
 	return head;
 }
 
-listNode* List::getTail()
+ listNode* List::getTail()
 {
 	return tail;
+}
+
+void List::addNodeToTail(int value)
+{
+	listNode a = listNode(value);
+	tail->setNext(a);
+	tail = &a;
 }

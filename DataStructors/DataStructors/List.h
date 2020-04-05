@@ -9,9 +9,9 @@ class List
 public:
     List();
     //methods
-    listNode* getHead();
-    listNode* getTail();
-
+     listNode* getHead();
+     listNode* getTail();
+    void addNodeToTail(int value);
 private:
     listNode* head;
     listNode* tail;

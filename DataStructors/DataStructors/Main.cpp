@@ -6,18 +6,19 @@ using namespace std;
 void main()
 {
 	int numberOfPc;
-	int numberOfLinks;
-	List lst;
-	cout << "hello, please enter number of computers";
+	int a,b;
+	cout << "hello, please enter number of computers: \n";
 	cin >> numberOfPc;
-	cin>> numberOfLinks;
 	//create network
+	List* network = new List[numberOfPc+1];
 
 	//insert network
-	for (int i = 0; i < numberOfLinks; i++)
+	for (int i = 0; i < numberOfPc; i++)
 	{
-		cout << "please enter network, source and connection";
-
+		cout << "please enter network, source and connection: \n";
+		cin >> a;
+		cin >> b;
+		network[a-1].addNodeToTail(b);
 	}
 	
 

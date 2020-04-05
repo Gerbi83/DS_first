@@ -3,23 +3,24 @@
 
 
 #include "List.h"
-class  List;
+class List;
 
 class listNode
 {
 public:
 
 	listNode();
+	listNode(int value);
 	listNode* getNext();
 	listNode* getPrevious();
+	void setNext(listNode& a);
 	int getValue();
-	List * getList();
+
 
 private:
 	int value;
-	List * innerList;
-	listNode* next;
-	listNode* previous;
+	listNode * next;
+	listNode * previous;
 };
 
 

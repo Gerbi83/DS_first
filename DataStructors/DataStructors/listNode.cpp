@@ -10,7 +10,12 @@ listNode::listNode()
 {
 	value = -1;
 	next = previous = nullptr;
-	
+}
+
+listNode::listNode(int vl)
+{
+	value = vl;
+	next = previous = nullptr;
 }
 
 listNode* listNode::getNext()
@@ -23,12 +28,12 @@ listNode* listNode::getPrevious()
 	return previous;
 }
 
+void listNode::setNext(listNode& a)
+{
+	next = &a;
+}
+
 int listNode::getValue()
 {
 	return value;
-}
-
-List * listNode::getList()
-{
-	return innerList;
 }
