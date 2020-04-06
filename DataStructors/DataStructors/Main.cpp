@@ -9,13 +9,12 @@ void main()
 {
 	int numberOfPc;
 	int a,b;
-	linkedList * test = new linkedList(3);
+	
 	cout << "hello, please enter number of computers: \n";
 	cin >> numberOfPc;
 	//create network
 	List* network = new List[numberOfPc+1];
-	
-
+	linkedList* test = new linkedList(numberOfPc);
 	//insert network
 	for (int i = 0; i < numberOfPc; i++)
 	{

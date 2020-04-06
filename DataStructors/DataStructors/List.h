@@ -2,19 +2,19 @@
 #define LIST_H
 
 #include "listNode.h"
-class listNode;
+class ListNode;
 
 class List
 {
 public:
     List();
     //methods
-     listNode* getHead();
-     listNode* getTail();
+     ListNode* getHead();
+     ListNode* getTail();
     void addNodeToTail(int value);
 private:
-    listNode* head;
-    listNode* tail;
+    ListNode* head;
+    ListNode* tail;
 
 };
 

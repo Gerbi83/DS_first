@@ -5,22 +5,22 @@
 #include "List.h"
 class List;
 
-class listNode
+class ListNode
 {
 public:
 
-	listNode();
-	listNode(int value);
-	listNode* getNext();
-	listNode* getPrevious();
-	void setNext(listNode& a);
+	ListNode();
+	ListNode(int value);
+	ListNode* getNext();
+	ListNode* getPrevious();
+	void setNext(ListNode& a);
 	int getValue();
 
 
 private:
 	int value;
-	listNode * next;
-	listNode * previous;
+	ListNode * next;
+	ListNode * previous;
 };
 
 
