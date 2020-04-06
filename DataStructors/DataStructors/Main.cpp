@@ -14,7 +14,7 @@ void main()
 	cin >> numberOfPc;
 	//create network
 	List* network = new List[numberOfPc+1];
-	linkedList* test = new linkedList(numberOfPc);
+	linkedList* Accessiable = new linkedList(numberOfPc);
 	//insert network
 	for (int i = 0; i < numberOfPc; i++)
 	{

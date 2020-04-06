@@ -9,7 +9,7 @@ public:
     linkedNode(int place);
 
 private:
-    int data = -9;
+   // int data = -9;
     int next = -1;
     bool color;
 
