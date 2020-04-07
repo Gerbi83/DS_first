@@ -5,7 +5,7 @@ using namespace std;
 #include "linkedList.h"
 #include "linkedNode.h"
 
-void main()
+int main()
 {
 	int numberOfPc;
 	int a,b;

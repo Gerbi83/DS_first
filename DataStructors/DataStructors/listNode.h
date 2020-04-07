@@ -1,7 +1,6 @@
 #ifndef LISTNODE_H
 #define LISTNODE_H
 
-
 #include "List.h"
 class List;
 
