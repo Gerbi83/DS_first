@@ -9,7 +9,8 @@ class linkedList
 {
 public:
     linkedList(int size);
-    
+    void addItem(int pc);
+
 private:
     linkedNode * info;
 };
