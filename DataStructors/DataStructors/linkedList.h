@@ -9,10 +9,13 @@ class linkedList
 {
 public:
     linkedList(int size);
-    void addItem(int pc);
-
+    void addItem(int location, int pc);
+    int getHeadFree() const;
+    linkedNode* getNext() const;
+    void printList() const;
 private:
-    linkedNode * info;
+    linkedNode *info;
+    int size; 
 };
 
 #endif //LINKEDLIST_H

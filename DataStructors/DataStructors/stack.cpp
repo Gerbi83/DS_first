@@ -35,6 +35,6 @@ void Stack::print_stack()
     for (int i=0; i < size; i++)
     {
 	    cout << "Item Number: " << i << endl;
-	    cout << this->arr[i].n << endl;
+	    cout << this->arr[i].computerNumber << endl;
 }
 }

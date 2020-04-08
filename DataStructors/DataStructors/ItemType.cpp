@@ -1,4 +1,4 @@
 #include "stack.h"
 
-ItemType::ItemType(int, int, int, int, int) : n(n), from(from), to(to), using_(using_), line(line) {}
+ItemType::ItemType(int color, int number, int free) : color(color), computerNumber(number), headFree(free) {}
 ItemType::ItemType() {}

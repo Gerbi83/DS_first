@@ -7,10 +7,10 @@ using namespace std;
 class ItemType
 {
 public:
-    int n; 
-    int from; int to; int using_;
-    int line;
-    ItemType(int n, int from, int to, int using_, int line);
+    int color; 
+    int computerNumber;
+    int headFree;
+    ItemType(int n, int number, int free);
     ItemType();
 };
 
