@@ -23,11 +23,9 @@ ItemType Stack::pop()
     return arr[size--];
 }
 
-void Stack::push(int data)
+void Stack::push(ItemType data)
 {
-    ItemType new_node;
-    new_node.data = data;
-    arr[size] = new_node;
+    arr[size] = data;
     size++;
 }
 
@@ -37,6 +35,6 @@ void Stack::print_stack()
     for (int i=0; i < size; i++)
     {
 	    cout << "Item Number: " << i << endl;
-	    cout << this->arr[i].data << endl;
+	    cout << this->arr[i].n << endl;
 }
 }

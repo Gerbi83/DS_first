@@ -2,12 +2,16 @@
 #define __STACK_H
 #include <iostream>
 using namespace std;
-#define MAX 1000
+#define MAX 30
 
 class ItemType
 {
 public:
-    int data;
+    int n; 
+    int from; int to; int using_;
+    int line;
+    ItemType(int n, int from, int to, int using_, int line);
+    ItemType();
 };
 
 class Stack
@@ -19,7 +23,7 @@ public:
     bool isEmpty();
     void makeEmpty();
     ItemType pop();
-    void push(int data);
+    void push(ItemType data);
     void print_stack();
 };
 

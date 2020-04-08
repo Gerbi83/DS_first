@@ -2,16 +2,11 @@
 using namespace std;
 #include "List.h"
 
-
-
 List::List()
 {
 	ListNode * a = new ListNode();
 	head =tail = a;
 }
-
-
-
 
  ListNode * List::getHead()
 {
