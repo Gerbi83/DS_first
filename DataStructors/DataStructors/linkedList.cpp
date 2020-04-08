@@ -18,3 +18,8 @@ linkedList::linkedList(int size)
 
 	}
 }
+
+void linkedList::addItem(int pc)
+{
+	this->info->setData(pc);
+}
