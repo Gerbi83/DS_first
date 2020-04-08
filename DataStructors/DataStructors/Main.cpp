@@ -31,9 +31,6 @@ int main()
 
 	for (int i = 0; i < numberOfConnection; i++) { color[i] = WHITE; }
 
-
-	for (int i = 0; i < numberOfPc; i++){color[i] = WHITE;}
-
 	//create accessiable linkedlist
 	linkedList* Accessiable = new linkedList(numberOfPc);
 
