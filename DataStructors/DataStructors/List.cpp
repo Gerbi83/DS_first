@@ -20,7 +20,7 @@ List::List()
 
 void List::addNodeToTail(int value)
 {
-	ListNode a = ListNode(value);
-	tail->setNext(a);
-	tail = &a;
+	ListNode * a = new ListNode(value);
+	this->tail->setNext(a);
+	this->tail = a;
 }

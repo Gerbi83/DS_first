@@ -1,2 +1,6 @@
-﻿  Main.cpp
+﻿  ItemType.cpp
+  linkedList.cpp
+  Main.cpp
+  stack.cpp
+  Generating Code...
   DataStructors.vcxproj -> C:\Users\nadav\source\repos\Project2\Project2\DS_first\DataStructors\Debug\DataStructors.exe

@@ -24,9 +24,9 @@ ListNode* ListNode::getPrevious()
 	return previous;
 }
 
-void ListNode::setNext(ListNode& a)
+void ListNode::setNext(ListNode * a)
 {
-	next = &a;
+	next = a;
 }
 
 int ListNode::getValue()

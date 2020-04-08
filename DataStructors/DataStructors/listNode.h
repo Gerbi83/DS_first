@@ -12,7 +12,7 @@ public:
 	ListNode(int value);
 	ListNode* getNext();
 	ListNode* getPrevious();
-	void setNext(ListNode& a);
+	void setNext(ListNode * a);
 	int getValue();
 
 
