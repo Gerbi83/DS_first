@@ -7,6 +7,8 @@ using namespace std;
 
 int main()
 {
+	const int BLACK = 0;
+	const int WHITE = 1;
 	int numberOfPc;
 	int a,b;
 	
@@ -14,8 +16,14 @@ int main()
 	cin >> numberOfPc;
 	//create network
 	List* network = new List[numberOfPc+1];
+	//create color array
+	int* color = new int[numberOfPc];
+	for (int i = 0; i < numberOfPc; i++)
+	{
+		color[i] = BLACK;
+	}
 	linkedList* Accessiable = new linkedList(numberOfPc);
-	//insert network
+	//insert network 
 	for (int i = 0; i < numberOfPc; i++)
 	{
 		cout << "please enter network, source and connection: \n";

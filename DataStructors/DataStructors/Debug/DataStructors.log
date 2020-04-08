@@ -1,6 +1,2 @@
 ﻿  Main.cpp
-C:\Users\nadav\source\repos\Project2\Project2\DS_first\DataStructors\DataStructors\Main.cpp(9,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  linkedList.cpp
-  linkedNode.cpp
-  Generating Code...
   DataStructors.vcxproj -> C:\Users\nadav\source\repos\Project2\Project2\DS_first\DataStructors\Debug\DataStructors.exe
