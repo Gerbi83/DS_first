@@ -27,7 +27,7 @@
     <ClCompile Include="linkedNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LlistNode.cpp">
+    <ClCompile Include="listNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

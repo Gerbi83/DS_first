@@ -11,7 +11,7 @@ public:
 private:
    // int data = -9;
     int next = -1;
-    bool color;
+    //bool color;
 
 };
 
