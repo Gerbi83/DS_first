@@ -16,16 +16,20 @@ linkedList::linkedList(int size) : size(size)
 		}
 		this[i].info = tmp;
 	}
+	headFree = 0;
 }
 // need to modify 
-void linkedList::addItem(int location, int pc)
+void linkedList::addItem(int pc)
 {
 	this->info->setData(pc);
+	headFree = this->info->next;
+	this->info->next = -9;
+
 }
 
 int linkedList::getHeadFree() const
 {
-	return info->next;
+	return headFree;
 }
 
 void linkedList::printList() const

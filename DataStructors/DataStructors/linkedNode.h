@@ -12,7 +12,7 @@ public:
     int getData() const;
     friend ostream& operator<<(ostream& os, const linkedNode &node);
 private:
-    int data = -9;
+    int pc = -9;
 };
 
 #endif //LINKEDNODE_H

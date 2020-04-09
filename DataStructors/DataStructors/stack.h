@@ -10,7 +10,7 @@ public:
     int color; 
     int computerNumber;
     int headFree;
-    ItemType(int n, int number, int free);
+    ItemType(int n, int number, int free); //<<<<<<<<<<<<<<<<<<<<<<<<<<<
     ItemType();
 };
 

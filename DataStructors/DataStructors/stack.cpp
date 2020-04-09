@@ -20,7 +20,7 @@ void Stack::makeEmpty()
 
 ItemType Stack::pop()
 {	
-    return arr[size--];
+    return arr[--size];
 }
 
 void Stack::push(ItemType data)

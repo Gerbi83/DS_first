@@ -2,22 +2,22 @@
 
 linkedNode::linkedNode(int place)
 {
-	data = -1;
+	pc = -1;
 	next = place + 1;
 }
 
-void linkedNode::setData(int pc)
+void linkedNode::setData(int computer)
 {
-	data = pc;
+	pc = computer;
 }
 
 int linkedNode::getData() const
 {
-	return data;
+	return pc;
 }
 
 ostream& operator<<(ostream& os, const linkedNode &node)
 {
-	os << "I'm computer number : " << node.data;
+	os << "I'm computer number : " << node.pc;
 	return os;
 }
