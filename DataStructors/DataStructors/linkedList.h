@@ -12,9 +12,8 @@ public:
     void addItem(int pc);
     int getHeadFree() const;
     void printList() const;
-    
+    LinkedNode* info;
 private:
-    LinkedNode *info;
     int size; 
     int headFree;
 };

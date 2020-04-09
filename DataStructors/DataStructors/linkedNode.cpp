@@ -16,6 +16,11 @@ int LinkedNode::getData() const
 	return pc;
 }
 
+void LinkedNode::setNext(int newNext)
+{
+	next = newNext;
+}
+
 ostream& operator<<(ostream& os, const LinkedNode &node)
 {
 	os << "I'm computer number : " << node.pc;

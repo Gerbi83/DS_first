@@ -2,27 +2,22 @@
 
 LinkedList::LinkedList(int size) : size(size)
 {
-	for (int i = 0; i < size; i++)
+	info = new LinkedNode[size];
+	for (int i = 0; i < size-1; i++)
 	{
-		LinkedNode* tmp;
-		if (i == size - 1)
-		{
-			tmp = new LinkedNode(-2);
-		}
-		else
-		{
-			tmp = new LinkedNode(i);
-		}
-		this[i].info = tmp;
+		info[i].setData(-9);
+		info[i].setNext(i + 1);
 	}
+	info[size] = -1;		
 }
 
 // need to modify 
 void LinkedList::addItem(int pc)
 {
-	this->info->setData(pc);
-	headFree = this->info->next;
-	this->info->next = -9;
+	info[headFree].setData(pc);
+	int temp = info[headFree].next;
+	info[headFree].next = -9;
+	headFree = temp;
 }
 
 int LinkedList::getHeadFree() const
