@@ -56,7 +56,8 @@ int main()
 	pcX = 1;
 	pcX--;
 	FindAccessibleRec(pcX, &accessible, color, network);
-	accessible.printList();
+	FindAccessible(pcX, &accessible, color, network);
+	//accessible.printList();
 }
 
 void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
@@ -65,22 +66,26 @@ void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
 	Stack s;
 	ItemType curr(colorArr[pcX] , pcX, linked->getHeadFree());
 	s.push(curr);
-	ListNode* iterator = netW[pcX].getHead();
+	ListNode* iterator;
 	while(s.isEmpty())
 	{
 		curr = s.pop();
+		iterator = netW[s.arr->computerNumber].getHead();
+		//inserting all of pcX nextwork
+		while (iterator->getNext())
+		{
+			iterator = iterator->getNext();
+			new_pc = iterator->getValue();
+			s.push(ItemType(colorArr[new_pc], new_pc, linked->getHeadFree()));
+		}
+		//inserting pcX
 		if(curr.color == WHITE)
 		{
-			linked->addItem(curr.computerNumber);
+			linked->addItem(curr.computerNumber+1);
 			colorArr[curr.computerNumber] = BLACK;
 			cout << "PC number: " << curr.computerNumber+1 << " ,has added to the accssible list " << endl;
 		}
-		while(iterator->getNext())
-		{
-			iterator = iterator->getNext();
-			new_pc = iterator->getValue(); 
-			s.push(ItemType(colorArr[new_pc], new_pc ,linked->getHeadFree()));
-		}
+	
 	}
 }
 
@@ -91,7 +96,7 @@ void FindAccessibleRec(int pcX, LinkedList * linked, int* colorArr, List* netW)
 		return;
 	}
 	colorArr[pcX] = BLACK;
-	linked->addItem(pcX);
+	linked->addItem(pcX+1);
 
 	ListNode* head;
 	head = netW[pcX].getHead();
