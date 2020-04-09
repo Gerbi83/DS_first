@@ -10,6 +10,7 @@ const int BLACK = 0;
 const int WHITE = 1;
 
 void FindAccessible(int pcX, LinkedList* linked, int* colorArr, List* netW);
+void FindAccessibleRec(int pcX, LinkedList* linked, int* colorArr, List* netW);
 
 int main()
 {
@@ -54,7 +55,7 @@ int main()
 	//cin >> pcX;
 	pcX = 1;
 	pcX--;
-	FindAccessible(pcX, &accessible, color, network);
+	FindAccessibleRec(pcX, &accessible, color, network);
 	accessible.printList();
 }
 
@@ -81,4 +82,26 @@ void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
 			s.push(ItemType(colorArr[new_pc], new_pc ,linked->getHeadFree()));
 		}
 	}
+}
+
+void FindAccessibleRec(int pcX, LinkedList * linked, int* colorArr, List* netW)
+{
+	if (colorArr[pcX] == BLACK)
+	{
+		return;
+	}
+	colorArr[pcX] = BLACK;
+	linked->addItem(pcX);
+
+	ListNode* head;
+	head = netW[pcX].getHead();
+	while (head != NULL)
+	{
+		if (colorArr[head->getValue()] == WHITE)
+		{
+			FindAccessible(head->getValue(), linked, colorArr, netW);
+		}
+		head = head->getNext();
+	}
+	return;
 }
