@@ -9,7 +9,7 @@ using namespace std;
 const int BLACK = 0;
 const int WHITE = 1;
 
-void FindAccessible(int pcX, linkedList* linked, int* colorArr, List* netW);
+void FindAccessible(int pcX, LinkedList* linked, int* colorArr, List* netW);
 
 int main()
 {
@@ -31,8 +31,8 @@ int main()
 
 	for (int i = 0; i < numberOfPc; i++) { color[i] = WHITE; }
 
-	//create accessible linkedlist
-	linkedList* accessible = new linkedList(numberOfPc);
+	//create accessible LinkedList
+	LinkedList* accessible = new LinkedList(numberOfPc);
 	//insert network 
 	for (int i = 0; i < numberOfConnection; i++)
 	{
@@ -57,7 +57,7 @@ int main()
 	accessible->printList();
 }
 
-void FindAccessible(int pcX, linkedList* linked, int* colorArr, List * netW)
+void FindAccessible(int pcX, LinkedList* linked, int* colorArr, List * netW)
 {	
 	int new_pc;
 	Stack s;

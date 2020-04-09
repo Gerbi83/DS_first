@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std;
 
-class linkedNode
+class LinkedNode
 {
 public:
     int next = -1;
-    linkedNode(int place);
+    LinkedNode(int place);
     void setData(int pc);
     int getData() const;
-    friend ostream& operator<<(ostream& os, const linkedNode &node);
+    friend ostream& operator<<(ostream& os, const LinkedNode &node);
 private:
     int pc = -9;
 };

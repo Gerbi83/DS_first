@@ -1,22 +1,22 @@
 #include "linkedNode.h"
 
-linkedNode::linkedNode(int place)
+LinkedNode::LinkedNode(int place)
 {
 	pc = -1;
 	next = place + 1;
 }
 
-void linkedNode::setData(int computer)
+void LinkedNode::setData(int computer)
 {
 	pc = computer;
 }
 
-int linkedNode::getData() const
+int LinkedNode::getData() const
 {
 	return pc;
 }
 
-ostream& operator<<(ostream& os, const linkedNode &node)
+ostream& operator<<(ostream& os, const LinkedNode &node)
 {
 	os << "I'm computer number : " << node.pc;
 	return os;

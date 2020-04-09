@@ -21,10 +21,10 @@
     <ClCompile Include="List.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linkedList.cpp">
+    <ClCompile Include="LinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linkedNode.cpp">
+    <ClCompile Include="LinkedNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="listNode.cpp">
@@ -44,10 +44,10 @@
     <ClInclude Include="listNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linkedList.h">
+    <ClInclude Include="LinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linkedNode.h">
+    <ClInclude Include="LinkedNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stack.h">

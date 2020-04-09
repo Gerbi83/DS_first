@@ -1,40 +1,38 @@
 #include "linkedList.h"
 
-linkedList::linkedList(int size) : size(size)
+LinkedList::LinkedList(int size) : size(size)
 {
-
 	for (int i = 0; i < size; i++)
 	{
-		linkedNode* tmp;
+		LinkedNode* tmp;
 		if (i == size - 1)
 		{
-			tmp = new linkedNode(-2);
+			tmp = new LinkedNode(-2);
 		}
 		else
 		{
-			tmp = new linkedNode(i);
+			tmp = new LinkedNode(i);
 		}
 		this[i].info = tmp;
 	}
-	headFree = 0;
 }
+
 // need to modify 
-void linkedList::addItem(int pc)
+void LinkedList::addItem(int pc)
 {
 	this->info->setData(pc);
 	headFree = this->info->next;
 	this->info->next = -9;
-
 }
 
-int linkedList::getHeadFree() const
+int LinkedList::getHeadFree() const
 {
 	return headFree;
 }
 
-void linkedList::printList() const
+void LinkedList::printList() const
 {
-	for(int i=0; i < size; i ++)
+	while(this->getHeadFree() != -1)
 	{
 		cout << this->getHeadFree() << endl;
 	}

@@ -3,18 +3,18 @@
 
 
 #include "linkedNode.h"
-class linkedNode;
+class LinkedNode;
 
-class linkedList
+class LinkedList
 {
 public:
-    linkedList(int size);
+    LinkedList(int size);
     void addItem(int pc);
     int getHeadFree() const;
     void printList() const;
     
 private:
-    linkedNode *info;
+    LinkedNode *info;
     int size; 
     int headFree;
 };
