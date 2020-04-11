@@ -18,13 +18,13 @@ int main()
 	int numberOfConnection;
 	int a,b, pcX;
 	
-	cout << "hello, please enter number of computers: \n";
+	cout << "hello, please enter number of computers: " << endl;
 	cin >> numberOfPc;
 
 	//create network
 	List* network = new List[numberOfPc];
 
-	cout << "Please enter the number of connections: \n";
+	cout << "Please enter the number of connections: " << endl;
 	cin >> numberOfConnection;
 
 	//create color array
@@ -38,7 +38,7 @@ int main()
 	//insert network 
 	for (int i = 0; i < numberOfConnection; i++)
 	{
-		cout << "please enter network, source and connection: \n";
+		cout << "please enter network, source and connection: " << endl;
 		cin >> a >> b;
 
 		if(a <= numberOfPc && b <= numberOfPc)
@@ -51,13 +51,13 @@ int main()
 			i--;
 		}
 	}
-	//cout << "please choose pc to check: \n" 
-	//cin >> pcX;
-	pcX = 1;
+	cout << "please choose pc to check: " << endl;
+	cin >> pcX;
 	pcX--;
-	FindAccessibleRec(pcX, &accessible, color, network);
 	FindAccessible(pcX, &accessible, color, network);
-	//accessible.printList();
+	accessible.printList();
+	FindAccessibleRec(pcX, &accessible, color, network);
+	accessible.printList();
 }
 
 void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
@@ -70,7 +70,7 @@ void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
 	while(s.isEmpty())
 	{
 		curr = s.pop();
-		iterator = netW[s.arr->computerNumber].getHead();
+		iterator = netW[s.arr->getComputerNumber()].getHead();
 		//inserting all of pcX nextwork
 		while (iterator->getNext())
 		{
@@ -79,17 +79,16 @@ void FindAccessible(int pcX, LinkedList * linked, int* colorArr, List * netW)
 			s.push(ItemType(colorArr[new_pc], new_pc, linked->getHeadFree()));
 		}
 		//inserting pcX
-		if(curr.color == WHITE)
+		if(curr.isWhite())
 		{
-			linked->addItem(curr.computerNumber+1);
-			colorArr[curr.computerNumber] = BLACK;
-			cout << "PC number: " << curr.computerNumber+1 << " ,has added to the accssible list " << endl;
+			linked->addItem(curr.getComputerNumber()+1);
+			colorArr[curr.getComputerNumber()] = BLACK;
+			curr.printComputer();
 		}
-	
 	}
 }
 
-void FindAccessibleRec(int pcX, LinkedList * linked, int* colorArr, List* netW)
+void FindAccessibleRec(int pcX, LinkedList *linked, int* colorArr, List* netW)
 {
 	if (colorArr[pcX] == BLACK)
 	{
@@ -108,5 +107,4 @@ void FindAccessibleRec(int pcX, LinkedList * linked, int* colorArr, List* netW)
 		}
 		head = head->getNext();
 	}
-	return;
 }

@@ -1,7 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-
 #include "linkedNode.h"
 class LinkedNode;
 

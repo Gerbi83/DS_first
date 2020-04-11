@@ -31,8 +31,10 @@ void LinkedNode::setNext(int newNext)
 	next = newNext;
 }
 
-ostream& operator<<(ostream& os, const LinkedNode &node)
+void LinkedNode::printNode() const
 {
-	os << "I'm computer number : " << node.pc;
-	return os;
+	if(pc > -1)
+		cout << "I'm computer number : " << pc << " in the accessible list" << endl;
+	else
+		return;
 }

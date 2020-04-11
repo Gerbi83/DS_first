@@ -1,30 +1,19 @@
 #ifndef __STACK_H
 #define __STACK_H
-#include <iostream>
-using namespace std;
-#define MAX 30
-
-class ItemType
-{
-public:
-    int color; 
-    int computerNumber;
-    int headFree;
-    ItemType(int n, int number, int free); //<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    ItemType();
-};
+#include "ItemType.h"
 
 class Stack
 {
 public:
-    ItemType arr[MAX];
-    int size; 
     Stack();
-    bool isEmpty();
+    bool isEmpty() const;
     void makeEmpty();
     ItemType pop();
     void push(ItemType data);
-    void print_stack();
+    ItemType arr[MAX];
+private:
+    int size;
+
 };
 
 

@@ -27,8 +27,8 @@ int LinkedList::getHeadFree() const
 
 void LinkedList::printList() const
 {
-	while(this->getHeadFree() != -1)
+	for(int i=0; i < size; i++)
 	{
-		cout << this->getHeadFree() << endl;
+		info[i].printNode();
 	}
 }

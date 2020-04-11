@@ -2,7 +2,7 @@
 #define LINKEDNODE_H
 #include <iostream>
 using namespace std;
-/*Need To Free*/
+
 class LinkedNode
 {
 public:
@@ -12,7 +12,7 @@ public:
     int getNext() const;
     int getData() const;
     void setNext(int newNext);
-    friend ostream& operator<<(ostream& os, const LinkedNode &node);
+    void printNode() const;
 private:
     int pc = -9;
     int next = -1;
