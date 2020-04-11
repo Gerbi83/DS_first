@@ -5,7 +5,18 @@ using namespace std;
 List::List()
 {
 	ListNode * a = new ListNode();
-	head =tail = a;
+	head = tail = a;
+}
+
+List::~List()
+{
+	ListNode *tmp;
+	if(head)
+	{
+		tmp = head;
+		head = head->getNext();
+		delete(tmp);
+	}
 }
 
  ListNode * List::getHead()

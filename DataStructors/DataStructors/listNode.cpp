@@ -5,23 +5,18 @@ using namespace std;
 ListNode::ListNode()
 {
 	value = -1;
-	next = previous = nullptr;
+	next = nullptr;
 }
 
 ListNode::ListNode(int vl)
 {
 	value = vl;
-	next = previous = nullptr;
+	next = nullptr;
 }
 
-ListNode* ListNode::getNext()
+ListNode* ListNode::getNext() const
 {
 	return next;
-}
-
-ListNode* ListNode::getPrevious()
-{
-	return previous;
 }
 
 void ListNode::setNext(ListNode * a)

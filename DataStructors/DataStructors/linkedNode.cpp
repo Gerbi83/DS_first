@@ -1,5 +1,10 @@
 #include "linkedNode.h"
 
+LinkedNode::LinkedNode()
+{
+	pc = -1;
+}
+
 LinkedNode::LinkedNode(int place)
 {
 	pc = -1;
@@ -14,6 +19,11 @@ void LinkedNode::setData(int computer)
 int LinkedNode::getData() const
 {
 	return pc;
+}
+
+int LinkedNode::getNext() const
+{
+	return next;
 }
 
 void LinkedNode::setNext(int newNext)

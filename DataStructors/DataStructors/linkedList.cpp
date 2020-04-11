@@ -9,14 +9,14 @@ LinkedList::LinkedList(int size) : size(size)
 		info[i].setNext(i + 1);
 	}
 	info[size] = -1;		
+	headFree = 0;
 }
 
-// need to modify 
 void LinkedList::addItem(int pc)
 {
 	info[headFree].setData(pc);
-	int temp = info[headFree].next;
-	info[headFree].next = -9;
+	int temp = info[headFree].getNext();
+	info[headFree].setNext(-9);
 	headFree = temp;
 }
 

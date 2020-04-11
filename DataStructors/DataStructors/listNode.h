@@ -10,16 +10,14 @@ public:
 
 	ListNode();
 	ListNode(int value);
-	ListNode* getNext();
-	ListNode* getPrevious();
-	void setNext(ListNode * a);
+	ListNode* getNext() const;
+	void setNext(ListNode *a);
 	int getValue();
 
 
 private:
 	int value;
 	ListNode * next;
-	ListNode * previous;
 };
 
 
