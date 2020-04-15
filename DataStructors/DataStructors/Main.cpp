@@ -18,13 +18,11 @@ int main()
 	int numberOfConnection;
 	int a,b, pcX;
 	
-	cout << "hello, please enter number of computers: " << endl;
 	cin >> numberOfPc;
 
 	//create network
 	List* network = new List[numberOfPc];
 
-	cout << "Please enter the number of connections: " << endl;
 	cin >> numberOfConnection;
 
 	//create color array
@@ -38,20 +36,16 @@ int main()
 	//insert network 
 	for (int i = 0; i < numberOfConnection; i++)
 	{
-		cout << "please enter network, source and connection: " << endl;
 		cin >> a >> b;
-
 		if(a <= numberOfPc && b <= numberOfPc)
 		{
 			network[a-1].addNodeToTail(b-1);
 		}
 		else
 		{
-			cout << "Invalid computer number\n try again" << endl;
 			i--;
 		}
 	}
-	cout << "please choose pc to check: " << endl;
 	cin >> pcX;
 	pcX--;
 	if (pcX < 0 || pcX > numberOfPc)
@@ -59,7 +53,9 @@ int main()
 	else
 	{
 		FindAccessible(pcX, &accessible, color, network);
+		accessible.printList();
 		FindAccessibleRec(pcX, &accessible, color, network);
+		accessible.printList();
 	}
 }
 
