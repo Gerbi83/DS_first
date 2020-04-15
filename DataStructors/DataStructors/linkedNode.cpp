@@ -34,7 +34,7 @@ void LinkedNode::setNext(int newNext)
 void LinkedNode::printNode() const
 {
 	if(pc > -1)
-		cout << "I'm computer number : " << pc << " in the accessible list" << endl;
+		cout << pc << " ";
 	else
 		return;
 }

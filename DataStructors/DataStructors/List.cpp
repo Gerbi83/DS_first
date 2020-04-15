@@ -19,19 +19,19 @@ List::~List()
 	}
 }
 
- ListNode * List::getHead()
+ListNode * List::getHead()
 {
 	return head;
 }
 
- ListNode* List::getTail()
+ListNode* List::getTail()
 {
 	return tail;
 }
 
 void List::addNodeToTail(int value)
 {
-	ListNode * a = new ListNode(value);
+	ListNode *a = new ListNode(value);
 	this->tail->setNext(a);
 	this->tail = a;
 }

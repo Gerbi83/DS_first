@@ -1,6 +1,6 @@
 #include "stack.h"
 
-ItemType::ItemType(int color, int number, int free) : color(color), computerNumber(number), headFree(free) 
+ItemType::ItemType(int color, int number) : color(color), computerNumber(number)
 {
 
 }
@@ -15,11 +15,6 @@ int ItemType::getComputerNumber() const
 int ItemType::isWhite() const
 {
     return color == 1;
-}
-
-int ItemType::getHeadFree() const
-{
-    return headFree;
 }
 
 void ItemType::printComputer() const

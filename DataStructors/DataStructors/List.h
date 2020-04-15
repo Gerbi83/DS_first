@@ -9,7 +9,6 @@ class List
 public:
     List();
     ~List();
-    //methods
      ListNode* getHead();
      ListNode* getTail();
     void addNodeToTail(int value);

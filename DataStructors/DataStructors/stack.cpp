@@ -12,14 +12,16 @@ bool Stack::isEmpty() const
 
 void Stack::makeEmpty()
 {
-    for(int i=0; i<size; i++)
+    ItemType to_del;
+    while(!isEmpty())
     {
-	this->pop();
+	    pop();
     }
 }
 
 ItemType Stack::pop()
 {	
+    
     return arr[--size];
 }
 

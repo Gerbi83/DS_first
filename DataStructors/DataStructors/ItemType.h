@@ -8,16 +8,14 @@ using namespace std;
 class ItemType
 {
 public:
-    ItemType(int n, int number, int free);
+    ItemType(int n, int number);
     ItemType();
     int getComputerNumber() const;
     int isWhite() const;
-    int getHeadFree() const;
     void printComputer() const;
 private:
     int color; 
     int computerNumber;
-    int headFree;
 };
 
 #endif // ITEMTYPE_H

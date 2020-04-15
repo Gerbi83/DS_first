@@ -19,7 +19,7 @@ ListNode* ListNode::getNext() const
 	return next;
 }
 
-void ListNode::setNext(ListNode * a)
+void ListNode::setNext(ListNode *a)
 {
 	next = a;
 }
