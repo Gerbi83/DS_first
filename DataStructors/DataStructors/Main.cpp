@@ -54,8 +54,8 @@ int main()
 	{
 		FindAccessible(pcX, &accessible, color, network);
 		accessible.printList();
-		FindAccessibleRec(pcX, &accessible, color, network);
-		accessible.printList();
+	/*	FindAccessibleRec(pcX, &accessible, color, network);
+		accessible.printList();*/
 	}
 }
 
@@ -69,18 +69,21 @@ void FindAccessible(int pcX, LinkedList *linked, int* colorArr, List *netW)
 	while(s.isEmpty())
 	{
 		curr = s.pop();
-		iterator = netW[s.arr->getComputerNumber()].getHead();
-		//inserting all of pcX nextwork
-		if(iterator->getNext())
-		{
-			iterator = iterator->getNext();
-			new_pc = iterator->getValue();
-			if (colorArr[new_pc] == WHITE)
-				s.push(ItemType(colorArr[new_pc], new_pc));
-		}
 		//inserting pcX
 		linked->addItem(curr.getComputerNumber()+1);
 		colorArr[curr.getComputerNumber()] = BLACK;
+		iterator = netW[curr.getComputerNumber()].getHead();
+		//inserting all of pcX nextwork
+		while(iterator->getNext())
+		{
+			iterator = iterator->getNext();
+			new_pc = iterator->getValue();
+			
+			if (colorArr[new_pc] == WHITE)
+			{
+				s.push(ItemType(colorArr[new_pc], new_pc));
+			}
+		}
 	}
 }
 

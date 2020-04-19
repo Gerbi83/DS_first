@@ -10,6 +10,7 @@ public:
 	ListNode();
 	ListNode(int value);
 	ListNode* getNext() const;
+	ListNode* getLast();
 	void setNext(ListNode *a);
 	int getValue();
 
